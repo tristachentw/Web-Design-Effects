@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #333;
+}
+
+ul {
+  padding: 0;
+}
+
+.example {
+  border-bottom: 1px solid #fff;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 85%;
+  margin: 40px auto 30px auto;
+}
+
+.nav_item {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 700ms;
+}
+
+.nav_item:nth-child(1) { background-color: #F44336; }
+.nav_item:nth-child(2) { background-color: #673AB7; }
+.nav_item:nth-child(3) { background-color: #03A9F4; }
+.nav_item:nth-child(4) { background-color: #4CAF50; }
+.nav_item:nth-child(5) { background-color: #FFC107; }
+
+.nav_item:nth-child(1)::before { transform: rotate(10deg); }
+.nav_item:nth-child(2)::before { transform: rotate(-5deg); }
+.nav_item:nth-child(3)::before { transform: rotate(0deg); }
+.nav_item:nth-child(4)::before { transform: rotate(8deg); }
+.nav_item:nth-child(5)::before { transform: rotate(-10deg); }
+
+.nav_item:hover {
+  padding-left: calc(10px + 60px);
+}
+
+.nav_item::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+  background-image: url('zeroyo.svg');
+  clip-path: polygon(0 0%, 100% 0%, 100% 0%, 0% 0%);
+  transition: all 700ms;
+}
+
+.nav_item:hover::before {
+  top: -20px;
+  opacity: 1;
+  clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+}
