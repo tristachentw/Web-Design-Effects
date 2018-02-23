@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  width: 550px;
+  height: 550px;
+  margin: 20px auto;
+  padding: 150px 68px 85px 68px;
+  background-image: url('images/pot.svg');
+  box-sizing: border-box;
+}
+
+.container_viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  padding: 8px;
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  background-color: #333;
+}
+
+footer a {
+  color: white;
+}
+
+.item {
+  position: absolute;
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  background-image: url('images/fruits.svg');
+  background-repeat: no-repeat;
+  background-size: 75px;
+  transition: all 200ms;
+}
+
+.icon-fruit01 { background-position: 0 0; }
+.icon-fruit02 { background-position: 0 -75px; }
+.icon-fruit03 { background-position: 0 -150px; }
+.icon-fruit04 { background-position: 0 -225px; }
+.icon-fruit05 { background-position: 0 -300px; }
+.icon-fruit06 { background-position: 0 -375px; }
+.icon-fruit07 { background-position: 0 -450px; }
+.icon-fruit08 { background-position: 0 -525px; }
+.icon-fruit09 { background-position: 0 -600px; }
+.icon-fruit10 { background-position: 0 -675px; }
+.icon-fruit11 { background-position: 0 -750px; }
+.icon-fruit12 { background-position: 0 -825px; }
+.icon-fruit13 { background-position: 0 -900px; }
+.icon-fruit14 { background-position: 0 -975px; }
+.icon-fruit15 { background-position: 0 -1050px; }
+
