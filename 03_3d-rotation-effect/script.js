@@ -9,7 +9,7 @@ const container = document.querySelector('.container'),
       middleY = container.getBoundingClientRect().height / 2;
 
 const data = [];
-let ds = 0;
+let ds = MAX_SPEED;
 
 const rotate = (delta = 0) => {
   items.forEach((item, i) => {
@@ -26,8 +26,8 @@ const rotate = (delta = 0) => {
           rad = -angle * Math.PI / 180,
           sin = Math.sin(rad),
           cos = Math.cos(rad),
-          x = middleX + RADIUS * cos - data[i].width / 2,
-          y = middleY + RADIUS * RATIO_AXIS * sin - data[i].height / 2,
+          x = middleX + cos * RADIUS - data[i].width / 2,
+          y = middleY + sin * RADIUS * RATIO_AXIS - data[i].height / 2,
           z = Math.round((sin + 1) * ((items.length - 1) / 2)); //sin: -1~1 > z: 0~lens-1
           alpha = (sin + 1) * 0.9 + 0.1, //sin: -1~1 > alpha: 0.1~1.9
           rotateY = angle - 90, //angle: 0~360 > rotateY: -90~270
@@ -43,7 +43,7 @@ const rotate = (delta = 0) => {
 const handleHover = e => {
   const { clientX } = e;
   ds = (clientX - middleX) * RATIO_SPEED;
-  ds = Math.abs(ds) < MAX_SPEED ? ds : clientX > middleX ? MAX_SPEED : -MAX_SPEED;
+  ds = Math.abs(ds) < MAX_SPEED ? ds : Math.sign(ds) * MAX_SPEED;
 };
 
 //initial
@@ -56,5 +56,5 @@ items.forEach((item, i) => {
 });
 rotate();
 
-timer = setInterval(() => rotate(ds), 350);
+setInterval(() => rotate(ds), 350);
 container.addEventListener('mousemove', handleHover);

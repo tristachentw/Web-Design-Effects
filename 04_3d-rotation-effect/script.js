@@ -57,4 +57,4 @@ items.forEach((item, i) => {
 rotate(0);
 
 setInterval(() => rotate(ds), 100);
-document.body.addEventListener('mousemove', handleHover);
+container.addEventListener('mousemove', handleHover);
