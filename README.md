@@ -1,37 +1,6 @@
-## Welcome to GitHub Pages
+## Examples
 
-You can use the [editor on GitHub](https://github.com/tristachentw/Web-Design-Effects/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/tristachentw/Web-Design-Effects/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+0. Nav Effect[https://tristachentw.github.io/Web-Design-Effects/01_nav-effect/]
+0. Magnet Effect[https://tristachentw.github.io/Web-Design-Effects/02_magnet-effect/]
+0. 3D Rotation Effect[https://tristachentw.github.io/Web-Design-Effects/03_3d-rotation-effect/]
+0. 3D Rotation Effect[https://tristachentw.github.io/Web-Design-Effects/04_3d-rotation-effect/]
