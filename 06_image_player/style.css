@@ -1,0 +1,38 @@
+:root {
+  --basis: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+}
+
+.player {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  height: 90vh;
+  margin: 5vh 5vw;
+  box-sizing: border-box;
+}
+
+.img {
+  height: 100%;
+  margin-left: 2px;
+  margin-right: 2px;
+  flex: 1 0 0;
+  border: 1px solid white;
+  object-fit: cover;
+  object-position: 50% 0%;
+  overflow: hidden; /* Important */
+  transition: all .8s;
+}
+
+.img:hover {
+  margin-left: 20px;
+  margin-right: 20px;
+  flex: 0 0 var(--basis);
+}
