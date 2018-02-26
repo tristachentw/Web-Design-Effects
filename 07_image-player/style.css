@@ -1,0 +1,67 @@
+:root {
+  --start: rotate(0);
+  --mid: rotate(0);
+  --end: rotate(0);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#feffe8+0,d6dbbf+100;Wax+3D+%231 */
+  background: #feffe8; /* Old browsers */
+  background: -moz-linear-gradient(top, #feffe8 0%, #d6dbbf 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #feffe8 0%,#d6dbbf 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #feffe8 0%,#d6dbbf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffe8', endColorstr='#d6dbbf',GradientType=0 ); /* IE6-9 */
+}
+
+.player {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: 30px auto;
+  width: 80%;
+  border-radius: 5px;
+}
+
+.image-space {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 15px;
+  border: 4px solid #ffc107;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+}
+
+.image-space .image-box:nth-child(1) {
+  opacity: 1;
+  transform: var(--mid) translateZ(75px);
+  transition: all 0s;
+}
+
+.image-space .image-box:nth-child(2) {
+  opacity: .1;
+  transform: var(--start) translateZ(75px);
+  transition: all 0s;
+}
+
+.image-space.rotation .image-box:nth-child(1) {
+  opacity: .1;
+  transform: var(--end) translateZ(75px);
+  transition: all 1s;
+}
+
+.image-space.rotation .image-box:nth-child(2) {
+  opacity: 1;
+  transform: var(--mid) translateZ(75px);
+  transition: all 1s;
+}
